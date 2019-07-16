@@ -28,7 +28,7 @@ export function login(user) {
 
                 const auth = {
                     user_id: '1',
-                    name: 'User',
+                    name: 'User Admin',
                 }
                 dispatch({type: 'AUTH_LOGIN', auth, res})
             }).catch(err => {

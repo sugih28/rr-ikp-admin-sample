@@ -8,6 +8,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import {connect} from 'react-redux'
 import {logout, checkAuth} from './store/actions/authAction'
+import Error404 from './components/page/error/Error404';
 
 class App extends React.Component {
   componentDidMount() {
@@ -29,11 +30,16 @@ class App extends React.Component {
           <main className="main">
             <div className="container">
               <br/>
-                <Switch>        
+                <Switch> 
+                {/* Page */}
                   <Route exact path="/" component={Home} />
-  
+                
+                {/* Auth */}
                   <Route exact path="/login" component={Login} />
                   <Route path="/register" component={Register} />
+
+                {/* Error */}
+                  <Route component={Error404} />
                 </Switch>
             </div>
   

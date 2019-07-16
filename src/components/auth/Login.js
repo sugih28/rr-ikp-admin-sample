@@ -56,10 +56,10 @@ export class Login extends Component {
                             </center>
 
                             <form onSubmit={this.submitHandle}>
-                                <label htmlFor="username">Username</label>
+                                <label htmlFor="email">Email</label>
                                 <div className="form-group">
-                                    <input type="text" className="form-control" name="email" id="username" placeholder="Username" onChange={this.changeHandle}/>
-                                    {this.validator.message('username', this.state.email, 'required')}
+                                    <input type="email" className="form-control" name="email" id="email" placeholder="Email" onChange={this.changeHandle}/>
+                                    {this.validator.message('email', this.state.email, 'required|email')}
                                 </div>
 
                                 <label htmlFor="password">Password</label>
